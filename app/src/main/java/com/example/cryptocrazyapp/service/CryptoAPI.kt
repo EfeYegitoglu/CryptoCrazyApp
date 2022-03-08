@@ -14,6 +14,6 @@ interface CryptoAPI {
         @Query("key") key:String,
         @Query("ids") id:String,
         @Query("attributes") attributes:String,
-    ):Unit
+    )
 
 }
