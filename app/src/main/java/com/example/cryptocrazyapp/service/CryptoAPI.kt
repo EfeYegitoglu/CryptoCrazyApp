@@ -1,12 +1,14 @@
 package com.example.cryptocrazyapp.service
 
+import com.example.cryptocrazyapp.model.Crypto
+import com.example.cryptocrazyapp.model.CryptoList
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface CryptoAPI {
 
     @GET("prices")
-    suspend fun getCryptoList(@Query("key") key: String):Unit
+    suspend fun getCryptoList(@Query("key") key: String): CryptoList
 
 
     @GET("currencies")
@@ -14,6 +16,6 @@ interface CryptoAPI {
         @Query("key") key:String,
         @Query("ids") id:String,
         @Query("attributes") attributes:String,
-    ):Unit
+    ): Crypto
 
 }
